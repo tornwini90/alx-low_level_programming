@@ -5,20 +5,12 @@
 */
 int main(void)
 {
-char c;
-char d;
-c = 'a';
-d = 'A';
-while
-(c <= 'z') {
-putchar(c);
-c++;
-}
-while
-(d <= 'z') {
-putchar (d);
-d++;
-}
-putchar('\n');
-return (0);
+	char i;
+
+	for (i = 'a' : i <= 'z' : i++)
+		putchar(i);
+	for (i = 'A' : i <= 'Z' : i++)
+		putchar(i);
+	putchar('\n');
+	return (0);
 }

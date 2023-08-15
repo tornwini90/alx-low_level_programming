@@ -1,1 +1,3 @@
-# 0x02-functions_nested_loops
+0x02. C - Functions, nested loops
+
+TASK TO BE DONE

@@ -1,18 +1,35 @@
 #include "main.h"
 /**
- * print_chessboard - Entry point
- * @a: array
- * Return: Always 0 (Success)
+ * _strstr - Locates a substring.
+ * @haystack: The string to be searched.
+ * @needle:The substring to be located
+ *
+ * Return: If the substring is located
+ *
+ * if the substring is not located - NULL.
  */
-void print_chessboard(char (*a)[8])
+char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
+	int index;
 
-	for (i = 0; i < 8; i++)
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		for (j = 0; j < 8; j++)
-			_putchar(a[i][j]);
-		_putchar('\n');
+		index = 0;
+
+		if (haystack[index] == needle[index])
+		{
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+
+				index++;
+			} while (haystack[index] == needle[index]);
+		}
+		haystack++;
 	}
+
+	return ('\0');
 }
